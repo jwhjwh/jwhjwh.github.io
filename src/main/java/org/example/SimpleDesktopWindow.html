@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>检测报告详情</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { width: 80%; margin: auto; }
+        label, input { display: block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>检测报告详情</h1>
+    <form>
+        <label for="sampleID">样品编号:</label>
+        <input type="text" id="sampleID" name="sampleID" value="" readonly>
+
+        <label for="reportID">报告编号:</label>
+        <input type="text" id="reportID" name="reportID" value="" readonly>
+
+        <label for="testingOrg">检测机构:</label>
+        <input type="text" id="testingOrg" name="testingOrg" value="" readonly>
+
+        <label for="testingItem">检测项目:</label>
+        <input type="text" id="testingItem" name="testingItem" value="" readonly>
+
+        <label for="project">工程名称:</label>
+        <input type="text" id="project" name="project" value="" readonly>
+
+        <label for="testingPart">检测部位:</label>
+        <input type="text" id="testingPart" name="testingPart" value="" readonly>
+
+        <label for="entrustUnit">委托单位:</label>
+        <input type="text" id="entrustUnit" name="entrustUnit" value="" readonly>
+
+        <label for="testStatus">试验状态:</label>
+        <input type="text" id="testStatus" name="testStatus" value="" readonly>
+
+        <label for="testingResult">检测结果:</label>
+        <input type="text" id="testingResult" name="testingResult" value="" readonly>
+
+        <label for="reportDate">报告日期:</label>
+        <input type="text" id="reportDate" name="reportDate" value="" readonly>
+    </form>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('sampleID').value = urlParams.get('sampleID');
+            document.getElementById('reportID').value = urlParams.get('reportID');
+            document.getElementById('testingOrg').value = urlParams.get('testingOrg');
+            document.getElementById('testingItem').value = urlParams.get('testingItem');
+            document.getElementById('project').value = urlParams.get('project');
+            document.getElementById('testingPart').value = urlParams.get('testingPart');
+            document.getElementById('entrustUnit').value = urlParams.get('entrustUnit');
+            document.getElementById('testStatus').value = urlParams.get('testStatus');
+            document.getElementById('testingResult').value = urlParams.get('testingResult');
+            document.getElementById('reportDate').value = urlParams.get('reportDate');
+        };
+    </script>
+</body>
+</html>
